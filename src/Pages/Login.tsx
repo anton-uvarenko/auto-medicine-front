@@ -10,7 +10,7 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/v1/login',
+    axios.post('http://51.12.31.5/v1/login',
       { 'email': email, 'password': password }).then((resp) => {
         localStorage.setItem('jwt', resp.data.token)
       })
