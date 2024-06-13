@@ -14,7 +14,7 @@ export default function Registration() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('firstName: ', firstName);
-    axios.post('http://51.12.31.5/v1/register',
+    axios.post('http://auto-medicine-back.azurewebsites.net/v1/register',
       {
         'firstName': firstName,
         'secondName': secondName,
