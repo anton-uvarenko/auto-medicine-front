@@ -10,7 +10,7 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post('http://auto-medicine-back.azurewebsites.net/v1/login',
+    axios.post('https://auto-medicine-back.azurewebsites.net/v1/login',
       { 'email': email, 'password': password }).then((resp) => {
         localStorage.setItem('jwt', resp.data.token)
       })
